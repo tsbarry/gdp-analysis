@@ -19,7 +19,7 @@ with open("state_gdp_analysis.csv", "r") as infile:
     # go through each year and get highest and lowest gdp
     for row in reader:
         list_data.append(row)
-print(list_data)
+        
 
 # get highest gdp for 2020 using "get_highest_gdp(list_data, '2020')"
 
