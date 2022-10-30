@@ -2,19 +2,24 @@ import csv
 
 def get_highest_gdp(data, year):
     high = float(data[0][year])
+    State_name = str(data[0]['GeoName'])
     for row in data:
-            value = float(row['2020'])
+            value = float(row[year])
             if value > high:
              high = value
-    return high
+             State_name = row['GeoName'] 
+    return State_name
 
 def get_lowest_gdp(data, year):
     low = float(data[0][year])
+    State_name = str(data[0]['GeoName'])
     for row in data:
-            value = float(row['2020'])
+            value = float(row[year])
             if value < low:
              low = value
-    return low
+             State_name = row['GeoName'] 
+
+    return State_name
 
 def get_state_gdp(data, state, year):
  for row in data:
